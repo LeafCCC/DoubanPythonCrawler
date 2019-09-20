@@ -16,6 +16,6 @@ for movie in all_movies.find_all("div",class_="item"):#找到每一个电影，�
     date=movie.find_all("li")[0].text   #上映日期
     type=movie.find_all("li")[1].text   #类型
     area=movie.find_all("li")[2].text   #地区
-    lovers=movie.find_all("li")[3].text #关注的人数
+    lovers=movie.find_all("li")[3].text.replace("想看","") #关注的人数
     print("电影名:{} 海报链接:{} 上映日期:{} 类型:{} 地区:{} 关注的人数:{}\n".format(name,href,date,type,area,lovers))#将结果输出
 
